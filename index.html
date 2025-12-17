@@ -6,66 +6,68 @@
     <title>FRAM – Local Food Delivery</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <h1 class="logo">FRAM</h1>
-        <button class="menu-btn" aria-label="Open menu">☰</button>
-        <ul class="nav-links">
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Chat</a></li>
-          <li><a href="#">Checkout</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section class="hero">
-      <h2>Home delivery from your local farms</h2>
-    </section>
+<aside class="sidebar">
+  <span>PRODUCTS</span>
+  <span>CHAT</span>
+  <span>CHECKOUT</span>
+</aside>
 
-    <section class="cards">
-      <div class="card">
-        <img src="assets/images/produce.jpg" alt="Seasonal produce" />
-        <h3>Shop our seasonal selection</h3>
-        <p>Updated every week</p>
-        <a class="btn" href="products.html">Browse our selection</a>
-      </div>
+<main class="page">
 
-      <div class="card">
-        <img src="assets/images/farmer.jpg" alt="Local farmer" />
-        <h3>Ask us about anything</h3>
-        <p>All your questions answered</p>
-        <a class="btn" href="contact.html">Go to chat</a>
-      </div>
-    </section>
-    <section class="how-it-works">
-      <h2>This is how it works</h2>
-      <div class="steps">
-        <div>
-          <h4>Order groceries</h4>
-          <p>Browse seasonal items and place your order online.</p>
-        </div>
-        <div>
-          <h4>Stock up</h4>
-          <p>Unpack and store items your way.</p>
-        </div>
-        <div>
-          <h4>Scan & reorder</h4>
-          <p>Scan QR codes to reorder easily.</p>
-        </div>
-        <div>
-          <h4>Swap & reuse</h4>
-          <p>We collect and reuse containers.</p>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <h3>Stay updated</h3>
-      <form>
-        <input type="text" placeholder="First name" />
-        <input type="email" placeholder="Email address" />
-        <button type="submit">Send</button>
-      </form>
-    </footer>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>FRAM</h1>
+    <p>HOME DELIVERY FROM<br>YOUR LOCAL FARMS</p>
+  </section>
+
+  <!-- TWO BLOCKS -->
+  <section class="split">
+    <article>
+      <img src="pictures/shop selection.jpg">
+      <h3>SHOP OUR SEASONAL SELECTION</h3>
+      <p>New produce is added continuously as time goes by and the seasons change.</p>
+      <button>Browse our selection</button>
+    </article>
+
+    <article>
+      <img src="pictures/gotochat.jpg">
+      <h3>ASK US ABOUT ANYTHING</h3>
+      <p>New produce is added continuously as time goes by and the seasons change.</p>
+      <button>Go to chat</button>
+    </article>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="how-title">THIS IS HOW IT WORKS</div>
+    <div class="how-grid">
+      <div><h4>ORDER GROCERIES</h4><p>Order from local farms.</p></div>
+      <div><h4>STOCK UP</h4><p>Flexible home delivery.</p></div>
+      <div><h4>SCAN & REORDER</h4><p>Scan QR to reorder.</p></div>
+      <div><h4>SWAP & REUSE</h4><p>Return packaging.</p></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <h2>POPULAR PRODUCE</h2>
+    <div class="product-grid">
+      <div><img src="pictures/oats.jpg"><span>Oats</span><small>48 kr / kg</small></div>
+      <div><img src="pictures/red onions.jpg"><span>Red Onions</span><small>48 kr / kg</small></div>
+      <div><img src="pictures/garlic.jpg"><span>Garlic</span><small>48 kr / kg</small></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>FRAM</h3>
+    <p>STAY UPDATED</p>
+    <input placeholder="Your name">
+    <input placeholder="Email address">
+    <button>Send</button>
+  </footer>
+
+</main>
 
     <script src="js/script.js"></script>
   </body>
