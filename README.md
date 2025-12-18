@@ -25,8 +25,24 @@ Optimized for desktop, tablet, and mobile devices using CSS Grid and media queri
 Product Listing & Cart State
 Users can add products to a basket, with cart state persisted using localStorage.
 
-Map Integration
-Partner farm locations are displayed on an interactive map using the Google Maps JavaScript API.
+Google Maps API Setup
+
+The product page includes an interactive map using the Google Maps JavaScript API.
+
+To enable the map locally:
+
+Create a project in Google Cloud Console.
+
+Enable the Maps JavaScript API.
+
+Generate an API key.
+
+Replace the placeholder in products.html:
+
+YOUR_GOOGLE_MAPS_API_KEY
+
+
+⚠️ For security reasons, the API key is not included in the repository and should not be committed to version control.
 
 Newsletter Forms
 Users can subscribe to a newsletter with client-side validation.
