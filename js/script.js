@@ -28,6 +28,8 @@ function handleAddToBasket() {
     if (!btn) return;
 
     const product = btn.closest(".product");
+    if (!product) return;
+
     const name = product.querySelector("strong")?.textContent;
     const price = product.querySelector(".meta span")?.textContent;
 
@@ -49,24 +51,28 @@ function handleAddToBasket() {
 }
 
 /* =========================
-   MOBILE MENU (future-proof)
+   CONTACT FORM
    ========================= */
 
-function setupMenuToggle() {
-  const menuBtn = document.querySelector(".menu");
-  if (!menuBtn) return;
+function setupContactForm() {
+  const form = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
 
-  menuBtn.addEventListener("click", () => {
-    document.body.classList.toggle("menu-open");
-  });
-}
+  // Exit safely if form is not on this page
+  if (!form || !formStatus) return;
 
-/* =========================
-   PAGE INIT
-   ========================= */
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateCartBadge();
-  handleAddToBasket();
-  setupMenuToggle();
-});
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      formStatus.textContent = "Please fill in all fields.";
+      formStatus.style.color = "red";
+      return;
+    }
+
+    const emailPattern = /^[^]()
+

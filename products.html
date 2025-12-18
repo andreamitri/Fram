@@ -15,9 +15,9 @@
   <body>
     <!-- TOP BAR -->
     <header class="topbar">
-      <button class="menu">☰</button>
-      <span class="logo">FRAM</span>
-      <span class="cart">0</span>
+      <a href="index.html" class="menu">☰</a>
+      <a href="index.html" class="logo">FRAM</a>
+      <a href="#" class="cart">0</a>
     </header>
 
     <main>
@@ -37,7 +37,8 @@
           <!-- Product -->
           <div class="product">
             <div class="img">
-              <img src="pictures/oats.jpg" /><span>Add to basket ↑</span>
+              <img src="pictures/oats.jpg" alt="Oats" />
+              <span>Add to basket ↑</span>
             </div>
             <div class="meta">
               <div><strong>Oats</strong><small>1 kg</small></div>
@@ -103,19 +104,33 @@
       </section>
 
       <!-- FOOTER -->
-      <footer>
-        <h3>FRAM</h3>
-        <hr />
+      <footer class="footer">
+        <div class="footer-inner">
+          <h3>FRAM</h3>
+          <hr />
 
-        <h4>STAY UPDATED</h4>
-        <p>
-          Sign up for our newsletter to be the first to<br />
-          know about new produce or other exciting<br />
-          news!
-        </p>
+          <h4>STAY UPDATED</h4>
+          <p>
+            Sign up for our newsletter to be the first<br />
+            to know about new produce or exciting news.
+          </p>
 
-        <input placeholder="First name" />
-        <input placeholder="E-mail address" />
+          <form class="newsletter-form">
+            <input
+              type="text"
+              placeholder="First name"
+              aria-label="First name"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email address"
+              aria-label="Email address"
+              required
+            />
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </footer>
     </main>
     <script src="js/script.js"></script>

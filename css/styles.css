@@ -23,33 +23,29 @@ body {
   align-content: center;
   gap: 48px;
   padding-left: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #000;
   font-weight: 600;
 }
 
-/* PAGE GRID */
+/* PAGE */
 .page {
-  display: grid;
-  grid-template-rows:
-    420px
-    auto
-    auto
-    auto
-    auto;
   background: var(--cream);
 }
 
 /* HERO */
 .hero {
-  background-image: url("../pictures/header.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  height: 420px;
+  background: url("../pictures/header.jpg") center / cover no-repeat;
   display: grid;
   place-content: center;
   text-align: center;
   color: white;
 }
+
 .hero h1 {
   font-family: "Playfair Display", serif;
   font-size: 72px;
@@ -62,12 +58,22 @@ body {
   letter-spacing: 1px;
 }
 
+/* BUTTONS */
+.btn {
+  width: max-content;
+  padding: 10px 18px;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 /* SPLIT */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 64px;
   gap: 64px;
+  padding: 64px;
   background: white;
 }
 
@@ -81,22 +87,8 @@ body {
   height: 260px;
   object-fit: cover;
 }
-.btn {
-  width: max-content;
-  padding: 10px 18px;
-  background: var(--red);
-  color: white;
-  border: none;
-}
 
-button {
-  width: max-content;
-  padding: 10px 18px;
-  background: var(--red);
-  color: white;
-  border: none;
-}
-
+/* HOW IT WORKS */
 .how-it-works {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -105,7 +97,6 @@ button {
   border-bottom: 1px solid #999;
 }
 
-/* LEFT SIDE */
 .how-left {
   display: grid;
   place-items: center;
@@ -113,20 +104,10 @@ button {
   padding: 60px;
 }
 
-.how-left h2 {
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-/* RIGHT SIDE */
 .how-right {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
 }
 
-/* EACH ROW */
 .how-row {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -140,7 +121,6 @@ button {
 
 .how-row h4 {
   font-size: 14px;
-  font-weight: 500;
   letter-spacing: 1px;
 }
 
@@ -150,22 +130,10 @@ button {
   max-width: 520px;
 }
 
-.how-row a {
-  font-size: 13px;
-  color: #000;
-  text-decoration: underline;
-}
-
-/* POPULAR PRODUCE */
+/* POPULAR */
 .popular {
   padding: 64px;
-  background: #fff;
-}
-
-.popular h2 {
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-bottom: 32px;
+  background: white;
 }
 
 .popular-grid {
@@ -174,7 +142,6 @@ button {
   gap: 32px;
 }
 
-/* PRODUCT */
 .product-img {
   position: relative;
 }
@@ -197,18 +164,10 @@ button {
   border-radius: 999px;
 }
 
-/* META */
 .product-meta {
   display: grid;
   grid-template-columns: 1fr auto;
   margin-top: 12px;
-  font-size: 14px;
-}
-
-.product-meta small {
-  display: block;
-  font-size: 12px;
-  opacity: 0.7;
 }
 
 /* FOOTER */
@@ -222,65 +181,26 @@ button {
   max-width: 420px;
 }
 
-.footer h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
 .footer hr {
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   margin: 16px 0 32px;
 }
 
-.footer h4 {
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-}
-
-.footer p {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-.footer input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: none;
-}
-
-.footer button {
-  width: 100%;
-  padding: 10px;
-  background: #eee;
-  border: none;
-}
-/* =========================
-   TABLET ≤ 1024px
-   ========================= */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
-  /* Layout */
   body {
     grid-template-columns: 80px 1fr;
   }
 
-  /* Hero */
-  .hero {
-    height: 360px;
-  }
-
-  /* Two-column sections collapse smarter */
   .split {
     grid-template-columns: 1fr;
-    gap: 48px;
-    padding: 48px;
   }
 
-  /* How it works */
+  .popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .how-it-works {
     grid-template-columns: 1fr;
   }
@@ -288,34 +208,10 @@ button {
   .how-left {
     border-right: none;
     border-bottom: 1px solid #999;
-    padding: 48px;
-  }
-
-  .how-right {
-    grid-template-rows: auto;
-  }
-
-  .how-row {
-    grid-template-columns: 180px 1fr;
-    padding: 32px 48px;
-  }
-
-  /* Products */
-  .popular-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Footer */
-  .footer {
-    padding: 48px;
   }
 }
 
-/* =========================
-   MOBILE ≤ 640px
-   ========================= */
 @media (max-width: 640px) {
-  /* Remove sidebar */
   body {
     grid-template-columns: 1fr;
   }
@@ -324,58 +220,41 @@ button {
     display: none;
   }
 
-  /* Hero */
   .hero {
     height: 280px;
-    padding: 0 16px;
   }
 
   .hero h1 {
     font-size: 48px;
   }
 
-  /* Cards */
-  .split {
-    padding: 32px 16px;
-    gap: 32px;
-  }
-
-  /* How it works */
-  .how-left {
-    padding: 32px 16px;
-    text-align: center;
-  }
-
-  .how-row {
+  .popular-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 24px 16px;
   }
 
-  .how-row h4 {
-    font-size: 13px;
-  }
-
-  /* Products */
+  .split,
   .popular {
     padding: 32px 16px;
   }
+}
+/* NEWSLETTER FORM */
+.newsletter-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
 
-  .popular-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+.newsletter-form input {
+  padding: 10px;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+}
 
-  .product-img img {
-    height: 220px;
-  }
-
-  /* Footer */
-  .footer {
-    padding: 32px 16px;
-  }
-
-  .footer-inner {
-    max-width: 100%;
-  }
+.newsletter-form button {
+  padding: 10px;
+  background: #eee;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
 }

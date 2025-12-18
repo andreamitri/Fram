@@ -1,129 +1,3 @@
-/* TOP BAR */
-.topbar {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  padding: 16px 24px;
-  border-bottom: 1px solid #bbb;
-  background: #f6f2de;
-}
-
-.menu {
-  background: none;
-  border: none;
-  font-size: 20px;
-}
-
-.logo {
-  text-align: center;
-  font-family: "Playfair Display", serif;
-}
-
-.cart {
-  background: #2fbf71;
-  color: white;
-  width: 24px;
-  height: 24px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  font-size: 12px;
-}
-
-/* PRODUCE PAGE LAYOUT */
-.produce-page {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 48px;
-  padding: 48px;
-  background: #f6f2de;
-}
-
-/* LEFT TEXT */
-.produce-info h1 {
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-
-.produce-info p {
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 260px;
-}
-
-/* GRID */
-.produce-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-/* PRODUCT */
-.product-img {
-  position: relative;
-}
-
-.product-img img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-.add {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 999px;
-}
-
-/* META */
-.product-meta {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  margin-top: 12px;
-  font-size: 14px;
-}
-
-.product-meta small {
-  display: block;
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .produce-page {
-    grid-template-columns: 1fr;
-  }
-
-  .produce-info p {
-    max-width: 100%;
-  }
-
-  .produce-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .produce-page {
-    padding: 24px 16px;
-  }
-
-  .produce-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-img img {
-    height: 220px;
-  }
-}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -144,9 +18,12 @@ body {
   border-bottom: 1px solid #aaa;
 }
 
+.topbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .menu {
-  background: none;
-  border: none;
   font-size: 20px;
 }
 
@@ -185,12 +62,14 @@ body {
   line-height: 1.6;
 }
 
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
+/* PRODUCT */
 .product .img {
   position: relative;
 }
@@ -281,12 +160,23 @@ footer p {
   margin-bottom: 24px;
 }
 
-footer input {
-  display: block;
+.newsletter-form {
+  display: grid;
+  gap: 12px;
+}
+
+.newsletter-form input {
   width: 320px;
   padding: 10px;
-  margin-bottom: 12px;
   border: none;
+}
+
+.newsletter-form button {
+  width: max-content;
+  padding: 10px 20px;
+  background: #eee;
+  border: none;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */
@@ -314,7 +204,7 @@ footer input {
     grid-template-columns: 1fr;
   }
 
-  footer input {
+  .newsletter-form input {
     width: 100%;
   }
 }
