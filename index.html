@@ -166,5 +166,29 @@
         </div>
       </footer>
     </main>
+    <!-- CHATBOT OVERLAY -->
+    <div class="chat-overlay">
+      <div class="chat-card">
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot">
+            <span class="label">FRAM</span>
+            <div class="bubble">What can I help you with today?</div>
+          </div>
+        </div>
+
+        <form id="chatForm" class="chat-input">
+          <input
+            id="chatInput"
+            type="text"
+            placeholder="Ask about farms, products, delivery…"
+            required
+          />
+          <button type="submit" aria-label="Send">↑</button>
+        </form>
+
+        <p id="chatError" class="chat-error"></p>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
