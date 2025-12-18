@@ -170,3 +170,35 @@ function removeTyping() {
   const typing = chatMessages.querySelector(".typing");
   if (typing) typing.remove();
 }
+/* =========================
+   GOOGLE MAPS INTEGRATION
+   ========================= */
+
+function initMap() {
+  const mapElement = document.getElementById("map");
+  if (!mapElement) return; // safety check
+
+  const farms = [
+    {
+      name: "Branäs Gård",
+      position: { lat: 60.422, lng: 13.041 }
+    },
+    {
+      name: "Sälen Farm",
+      position: { lat: 61.157, lng: 12.936 }
+    }
+  ];
+
+  const map = new google.maps.Map(mapElement, {
+    zoom: 7,
+    center: farms[0].position
+  });
+
+  farms.forEach(farm => {
+    new google.maps.Marker({
+      position: farm.position,
+      map: map,
+      title: farm.name
+    });
+  });
+}

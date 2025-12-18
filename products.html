@@ -91,17 +91,20 @@
       <!-- FARMS -->
       <section class="farms">
         <div class="farms-left">
-          <h2>SEE OUR<br />PARTNERING FARMS</h2>
+          <h2>SEE OUR<br />PARTNER FARMS</h2>
         </div>
 
         <div class="farms-right">
-          <iframe
-            src="https://www.google.com/maps?q=Bran%C3%A4sd%20G%C3%A5rd&z=10&output=embed"
-            loading="lazy"
-          >
-          </iframe>
+          <div id="map"></div>
         </div>
       </section>
+
+      <!-- Google Maps API (placeholder key) -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"
+        async
+        defer
+      ></script>
 
       <!-- FOOTER -->
       <footer class="footer">
