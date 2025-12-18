@@ -252,3 +252,123 @@ button {
   background: #eee;
   border: none;
 }
+/* =========================
+   TABLET ≤ 1024px
+   ========================= */
+@media (max-width: 1024px) {
+  /* Layout */
+  body {
+    grid-template-columns: 80px 1fr;
+  }
+
+  /* Hero */
+  .hero {
+    height: 360px;
+  }
+
+  /* Two-column sections collapse smarter */
+  .split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 48px;
+  }
+
+  /* How it works */
+  .how-it-works {
+    grid-template-columns: 1fr;
+  }
+
+  .how-left {
+    border-right: none;
+    border-bottom: 1px solid #999;
+    padding: 48px;
+  }
+
+  .how-right {
+    grid-template-rows: auto;
+  }
+
+  .how-row {
+    grid-template-columns: 180px 1fr;
+    padding: 32px 48px;
+  }
+
+  /* Products */
+  .popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+  .footer {
+    padding: 48px;
+  }
+}
+
+/* =========================
+   MOBILE ≤ 640px
+   ========================= */
+@media (max-width: 640px) {
+  /* Remove sidebar */
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    height: 280px;
+    padding: 0 16px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  /* Cards */
+  .split {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  /* How it works */
+  .how-left {
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  .how-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px 16px;
+  }
+
+  .how-row h4 {
+    font-size: 13px;
+  }
+
+  /* Products */
+  .popular {
+    padding: 32px 16px;
+  }
+
+  .popular-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .product-img img {
+    height: 220px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 32px 16px;
+  }
+
+  .footer-inner {
+    max-width: 100%;
+  }
+}
